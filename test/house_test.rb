@@ -101,7 +101,9 @@ class HouseTest < Minitest::Test
     house.add_room(room_3)
     house.add_room(room_2)
 
-    assert_equal [room_4, room_3, room_2, room_1], house.rooms_sorted_by_area
+    expected = [room_4, room_3, room_2, room_1]
+
+    assert_equal expected, house.rooms_sorted_by_area
   end
 
   def test_it_sorts_rooms_by_category
