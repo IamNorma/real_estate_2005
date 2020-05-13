@@ -20,4 +20,10 @@ class House
       category == room.category
     end
   end
+
+  def area
+    @rooms.sum do |room|
+      room.area
+    end 
+  end
 end
